@@ -17,8 +17,9 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  h1 {
+  align-items: flex-start;
+  h1,
+  span {
     color: black;
   }
 }

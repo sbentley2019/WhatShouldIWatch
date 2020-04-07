@@ -14,24 +14,26 @@ export default function Login(props) {
   };
 
   return (
-    <form onSubmit={e => submitForm(e)}>
-      <h1>Login</h1>
-      <input
-        type="text"
-        name="username"
-        placeholder="username"
-        value={user.username}
-        onChange={handleUser}
-      />
-      <input
-        type="password"
-        placeholder="password"
-        value={user.password}
-        name="password"
-        onChange={handleUser}
-      />
-      <button>Enter</button>
-      <p>{user.username + " " + user.password}</p>
-    </form>
+    <main>
+      <form onSubmit={e => submitForm(e)}>
+        <h1>Login</h1>
+        <input
+          type="text"
+          name="username"
+          placeholder="username"
+          value={user.username}
+          onChange={handleUser}
+        />
+        <input
+          type="password"
+          placeholder="password"
+          value={user.password}
+          name="password"
+          onChange={handleUser}
+        />
+        <button>Enter</button>
+        <p>{user.username + " " + user.password}</p>
+      </form>
+    </main>
   );
 }

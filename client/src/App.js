@@ -13,7 +13,7 @@ export default function App() {
       <header className="App-header">
         <nav>
           <Link to="/" className="nav-link">
-            Navbar
+            Home
           </Link>
           <div className="search-div">
             <input type="text" placeholder="search" />
@@ -31,19 +31,18 @@ export default function App() {
           </div>
         </nav>
       </header>
-      <main>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-        </Switch>
-      </main>
+
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
+        </Route>
+      </Switch>
     </Router>
   );
 }
