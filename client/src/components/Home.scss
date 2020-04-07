@@ -5,3 +5,15 @@ main {
   text-align: center;
   padding-top: 100px;
 }
+
+.table-div {
+  display: flex;
+  justify-content: space-around;
+  table {
+    width: 40%;
+    border: 1px solid white;
+  }
+  table:last-of-type {
+    width: 10%;
+  }
+}
