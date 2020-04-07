@@ -1,0 +1,16 @@
+form {
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid rgb(180, 176, 176);
+  border-radius: 1.5rem;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h1 {
+    color: black;
+  }
+}

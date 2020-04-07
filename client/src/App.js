@@ -1,7 +1,11 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import Home from "./components/Home.js";
+import Login from "./components/Login.js";
+import Signup from "./components/Signup.js";
 
 export default function App() {
   return (
@@ -27,7 +31,19 @@ export default function App() {
           </div>
         </nav>
       </header>
-      <main></main>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+        </Switch>
+      </main>
     </Router>
   );
 }
