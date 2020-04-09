@@ -4,36 +4,37 @@ import "./Login.scss";
 export default function Login(props) {
   const [user, setUser] = useState({ username: "", password: "" });
 
-  const submitForm = function(e) {
+  const submitForm = function (e) {
     e.preventDefault();
     console.log("login", user);
   };
 
-  const handleUser = function(e) {
+  const handleUser = function (e) {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
   return (
-    <main>
-      <form onSubmit={e => submitForm(e)}>
-        <h1>Login</h1>
+    <>
+      <h1>Login</h1>
+      <form className="login-form" onSubmit={(e) => submitForm(e)}>
+        <label for="username">Username</label>
         <input
           type="text"
           name="username"
-          placeholder="username"
+          placeholder="Username"
           value={user.username}
           onChange={handleUser}
         />
+        <label for="password">Password</label>
         <input
           type="password"
-          placeholder="password"
-          value={user.password}
           name="password"
+          placeholder="Password"
+          value={user.password}
           onChange={handleUser}
         />
-        <button>Enter</button>
-        <p>{user.username + " " + user.password}</p>
+        <button type="submit">Login</button>
       </form>
-    </main>
+    </>
   );
 }

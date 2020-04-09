@@ -1,79 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Home.scss";
-import { movies, genre, reviews } from "../testData";
+import { Link } from "react-router-dom";
 
 export default function Home(props) {
-  const [state, setState] = useState({ rated: [], recent: [], genre: [] });
-
-  useEffect(() => {
-    setState({ rated: movies, recent: reviews, genre: genre });
-  }, []);
-
   return (
-    <main>
-      <h1>Home</h1>
-      <div className="table-div">
-        <table>
-          <thead>
-            <tr>
-              <th>rank</th>
-              <th>img</th>
-              <th>title</th>
-              <th>rating</th>
-            </tr>
-          </thead>
-          <tbody>
-            {state.rated.map((movie, index) => {
-              return (
-                <tr>
-                  <td>{index}</td>
-                  <td>
-                    <img src={movie.link} />
-                  </td>
-                  <td>{`${movie.title} (${movie.date})`}</td>
-                  <td>{movie.rating}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-        <table>
-          <thead>
-            <tr>
-              <th>title</th>
-              <th>description</th>
-              <th>rating</th>
-            </tr>
-          </thead>
-          <tbody>
-            {state.recent.map(review => {
-              return (
-                <tr>
-                  <td>{review.title}</td>
-                  <td>{review.review}</td>
-                  <td>{review.rated}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-        <table>
-          <thead>
-            <tr>
-              <th>genre</th>
-            </tr>
-          </thead>
-          <tbody>
-            {state.genre.map(item => {
-              return (
-                <tr>
-                  <td>{item}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+    <>
+      <h1>What Should I Watch?</h1>
+      <div className="options-div">
+        <figure>
+          <Link to="/">
+            <i class="fas fa-home fa-5x"></i>
+          </Link>
+        </figure>
+        <figure>
+          <Link to="/search">
+            <i class="fas fa-search fa-5x"></i>
+          </Link>
+        </figure>
+        <figure>
+          <Link to="/ranking">
+            <i class="fas fa-list-ol fa-5x"></i>
+          </Link>
+        </figure>
+        <figure>
+          <Link to="/">
+            <i class="fas fa-dice fa-5x"></i>
+          </Link>
+        </figure>
+        <figure>
+          <Link to="/login">
+            <i class="fas fa-user-circle fa-5x"></i>
+          </Link>
+        </figure>
+        <figure>
+          <Link to="/signup">
+            <i class="fas fa-user-plus fa-5x"></i>
+          </Link>
+        </figure>
       </div>
-    </main>
+    </>
   );
 }

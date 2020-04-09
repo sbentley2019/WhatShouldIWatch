@@ -3,11 +3,21 @@
   color: white;
 }
 
+main {
+  height: 90vh;
+  padding: 50px 0;
+  background-image: linear-gradient(to bottom right, darkblue, white);
+  color: white;
+  h1 {
+    text-align: center;
+  }
+}
+
 nav {
   position: fixed;
   width: 90vw;
   height: 60px;
-  background: blue;
+
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
@@ -18,11 +28,10 @@ nav {
   }
   .nav-link {
     padding: 10px 15px;
-    background-color: blue;
-    color: white;
+    color: black;
     &:hover {
-      background-color: #fff;
-      color: blue;
+      background-color: black;
+      color: white;
     }
     &:first-of-type {
       border-top-left-radius: 1.5rem;

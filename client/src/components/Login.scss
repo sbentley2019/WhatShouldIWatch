@@ -1,24 +1,29 @@
-main {
-  background-color: #282c34;
-  height: 94vh;
-  color: #fff;
-  text-align: center;
-  padding-top: 100px;
-}
-
-form {
+.login-form {
   margin: 0 auto;
-  padding: 30px;
-  background-color: #fff;
-  border: 1px solid rgb(180, 176, 176);
-  border-radius: 1.5rem;
-  height: 300px;
-  width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  h1 {
-    color: black;
+  justify-content: flex-start;
+  text-align: center;
+  input {
+    width: 200px;
+    padding: 5px 10px;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border: 2px solid orange;
+  }
+  button {
+    width: 100px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin: 10px auto;
+    &:hover {
+      background-color: rgb(139, 173, 185);
+    }
   }
 }

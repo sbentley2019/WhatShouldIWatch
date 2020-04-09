@@ -7,22 +7,22 @@ export default function Signup(props) {
     email: "",
     username: "",
     password: "",
-    repassword: ""
+    repassword: "",
   });
 
-  const submitForm = function(e) {
+  const submitForm = function (e) {
     e.preventDefault();
     console.log("login", user);
   };
 
-  const handleUser = function(e) {
+  const handleUser = function (e) {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   return (
-    <main>
-      <form onSubmit={submitForm}>
-        <h1>Signup</h1>
-
+    <>
+      <h1>Signup</h1>
+      <form className="signup-form" onSubmit={submitForm}>
+        <label for="name">Name:</label>
         <input
           type="text"
           name="name"
@@ -30,7 +30,7 @@ export default function Signup(props) {
           value={user.name}
           onChange={handleUser}
         />
-
+        <label for="email">Email:</label>
         <input
           type="email"
           name="email"
@@ -38,39 +38,33 @@ export default function Signup(props) {
           value={user.email}
           onChange={handleUser}
         />
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="username"
+          value={user.username}
+          onChange={handleUser}
+        />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          placeholder="password"
+          value={user.password}
+          name="password"
+          onChange={handleUser}
+        />
+        <label for="repassword">Confirm Password:</label>
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          value={user.repassword}
+          name="repassword"
+          onChange={handleUser}
+        />
 
-        <div>
-          <input
-            type="text"
-            name="username"
-            placeholder="username"
-            value={user.username}
-            onChange={handleUser}
-          />
-          <span>icon</span>
-        </div>
-        <div>
-          <input
-            type="password"
-            placeholder="password"
-            value={user.password}
-            name="password"
-            onChange={handleUser}
-          />
-          <span>icon</span>
-        </div>
-        <div>
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={user.repassword}
-            name="repassword"
-            onChange={handleUser}
-          />
-          <span>icon</span>
-        </div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
-    </main>
+    </>
   );
 }
