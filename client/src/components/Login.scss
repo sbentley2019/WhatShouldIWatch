@@ -1,14 +1,19 @@
 .login-form {
   margin: 0 auto;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
   input {
     width: 200px;
-    padding: 5px 10px;
-    margin: 0 auto;
+    padding: 10px 15px;
+    margin: 0 auto 10px;
     margin-top: 5px;
+    border-radius: 1.5rem;
+    &:focus {
+      outline: none;
+    }
   }
 
   input[type="text"]:focus,
