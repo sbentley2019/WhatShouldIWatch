@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { movies } from "../testData";
-import { Link } from "react-router-dom";
 import "./Ranking.scss";
 
 export default function Ranking(props) {

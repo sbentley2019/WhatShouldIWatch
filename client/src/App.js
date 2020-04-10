@@ -11,12 +11,16 @@ import Profile from "./components/Profile.js";
 import Navbar from "./components/Navbar.js";
 
 export default function App() {
-  const [state, setState] = useState({ isLoggedIn: false, user: {} });
+  const [state, setState] = useState({ isLoggedIn: false, user: null });
+
+  const logout = function () {
+    setState({ isLoggedIn: false, user: null });
+  };
 
   return (
     <main>
       <Router>
-        <Navbar />
+        <Navbar state={state} logout={logout} />
         <Switch>
           <Route exact path="/">
             <Home />

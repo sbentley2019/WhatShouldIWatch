@@ -7,35 +7,53 @@ export default function Navbar(props) {
     <nav className="options-nav">
       <figure>
         <Link to="/">
-          <i class="fas fa-home fa-3x"></i>
+          <i className="fas fa-home fa-3x"></i>
         </Link>
       </figure>
       <figure>
         <Link to="/search">
-          <i class="fas fa-search fa-3x"></i>
+          <i className="fas fa-search fa-3x"></i>
         </Link>
       </figure>
       <figure>
         <Link to="/ranking">
-          <i class="fas fa-list-ol fa-3x"></i>
+          <i className="fas fa-list-ol fa-3x"></i>
         </Link>
       </figure>
       <figure>
         <Link to="/">
-          <i class="fas fa-dice fa-3x"></i>
+          <i className="fas fa-dice fa-3x"></i>
         </Link>
       </figure>
       <div className="user-div">
-        <figure>
-          <Link to="/login">
-            <i class="fas fa-user-circle fa-3x"></i>
-          </Link>
-        </figure>
-        <figure>
-          <Link to="/signup">
-            <i class="fas fa-user-plus fa-3x"></i>
-          </Link>
-        </figure>
+        {props.state.isLoggedIn ? (
+          <>
+            <Link to="/">
+              <figure>
+                <i className="far fa-id-badge fa-3x"></i>
+              </figure>
+            </Link>
+            <figure>
+              <i
+                className="fas fa-sign-out-alt fa-3x"
+                onClick={() => props.logout()}
+              ></i>
+            </figure>
+          </>
+        ) : (
+          <>
+            <figure>
+              <Link to="/login">
+                <i className="fas fa-user-circle fa-3x"></i>
+              </Link>
+            </figure>
+            <figure>
+              <Link to="/signup">
+                <i className="fas fa-user-plus fa-3x"></i>
+              </Link>
+            </figure>
+          </>
+        )}
       </div>
     </nav>
   );

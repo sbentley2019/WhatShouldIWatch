@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { genre } from "../testData";
-import { Link } from "react-router-dom";
 import "./Search.scss";
 
 export default function Search(props) {

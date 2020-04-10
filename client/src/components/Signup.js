@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Signup.scss";
-import { Link } from "react-router-dom";
 
 export default function Signup(props) {
   const [user, setUser] = useState({
@@ -13,7 +12,11 @@ export default function Signup(props) {
 
   const submitForm = function (e) {
     e.preventDefault();
-    console.log("login", user);
+    props.setState({
+      ...props.state,
+      isLoggedIn: true,
+      user: { name: user.name, email: user.email, username: user.username },
+    });
   };
 
   const handleUser = function (e) {

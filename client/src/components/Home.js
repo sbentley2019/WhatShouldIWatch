@@ -7,8 +7,8 @@ export default function Home(props) {
     <>
       <h1>Browse</h1>
       <div className="browse-div">
-        {categories.map((item) => (
-          <figure>
+        {categories.map((item, index) => (
+          <figure key={index}>
             <img src={item.src} alt={item.alt} />
           </figure>
         ))}

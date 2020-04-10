@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 50px;
   figure i {
     color: white;
     &:hover {
@@ -12,5 +13,6 @@
   }
   .user-div {
     display: flex;
+    width: 266px;
   }
 }

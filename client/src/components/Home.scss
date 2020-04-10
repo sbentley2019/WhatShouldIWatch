@@ -6,5 +6,9 @@
   margin: 0 auto;
   img {
     border-radius: 1.4rem;
+    cursor: pointer;
+  }
+  figure:hover img {
+    opacity: 0.7;
   }
 }
