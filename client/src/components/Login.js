@@ -17,7 +17,7 @@ export default function Login(props) {
   };
 
   return (
-    <>
+    <div className="login-div">
       <h1>Login</h1>
       <form className="login-form" onSubmit={(e) => submitForm(e)}>
         <label for="username">Username</label>
@@ -38,6 +38,6 @@ export default function Login(props) {
         />
         <button type="submit">Login</button>
       </form>
-    </>
+    </div>
   );
 }

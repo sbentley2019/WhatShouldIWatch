@@ -1,22 +1,19 @@
 .options-nav {
-  // width: 100%;
   min-height: 80vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   position: fixed;
-  // justify-content: space-between;
   justify-content: center;
-  // flex-wrap: wrap;
-  // margin-bottom: 50px;
   z-index: 10;
-  figure i {
-    color: white;
-    &:hover {
-      color: rgb(179, 175, 175);
-    }
+}
+figure i {
+  color: white;
+  &:hover {
+    opacity: 0.5;
   }
 }
+
 .user-div {
   width: 100%;
   position: fixed;
@@ -24,11 +21,5 @@
   justify-content: flex-end;
   figure {
     margin: 20px;
-    i {
-      color: white;
-      &:hover {
-        color: rgb(179, 175, 175);
-      }
-    }
   }
 }

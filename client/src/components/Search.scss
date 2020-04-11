@@ -1,26 +1,25 @@
-.home-figure {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -38px;
-}
-.ranking-figure {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.random-figure {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.login-figure {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.signup-figure {
-  position: absolute;
-  top: 0;
-  left: 0;
+.search-form {
+  width: 50%;
+  margin: 0 auto;
+  .search-section {
+    padding: 0 15px 15px;
+    &:last-of-type {
+      text-align: center;
+    }
+  }
+  .searchTitle-div {
+    input[type="text"] {
+      width: 40%;
+      min-width: 210px;
+    }
+  }
+  .searchGenre-div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    label {
+      width: 120px;
+    }
+  }
 }
