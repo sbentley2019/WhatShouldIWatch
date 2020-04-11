@@ -7,10 +7,10 @@ export default function Search(props) {
   const [state, setState] = useState({
     title: "",
     type: "all",
-    date: [],
-    rating: [],
+    date: [0, 3000],
+    rating: [0, 10],
     genre: {},
-    sortBy: "",
+    sortBy: "alphabetical",
   });
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function Search(props) {
       <form className="search-form" onSubmit={handleSubmit}>
         <hr />
         <div className="searchTitle-div search-section">
-          <h3>Title:</h3>
+          <h3>Title</h3>
           <input
             type="text"
             name="title"
@@ -55,7 +55,7 @@ export default function Search(props) {
         </div>
         <hr />
         <div className="searchType-div search-section">
-          <h3>Type:</h3>
+          <h3>Type</h3>
           <label>
             <input
               type="radio"
@@ -104,6 +104,54 @@ export default function Search(props) {
               );
             })}
           </div>
+        </div>
+        <hr />
+        <div className="searchDate-div search-section">
+          <h3>Release Date</h3>
+          <input type="number" name="date-from" value={state.date[0]} />
+          <span>to</span>
+          <input type="number" name="date-to" value={state.date[1]} />
+        </div>
+        <hr />
+        <div className="searchRating-div search-section">
+          <h3>Rating</h3>
+          <input type="number" name="from" value={state.rating[0]} />
+          <span>to</span>
+          <input type="number" name="to" value={state.rating[1]} />
+        </div>
+        <hr />
+        <div className="searchSort-div search-section">
+          <h3>Sort by</h3>
+          <label>
+            <input
+              type="radio"
+              name="sortBy"
+              value="alphabetical"
+              checked={state.sortBy === "alphabetical"}
+              onChange={(e) => handleState(e)}
+            />
+            Alphabetical
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="sortBy"
+              value="rating"
+              checked={state.sortBy === "rating"}
+              onChange={(e) => handleState(e)}
+            />
+            Ratings
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="sortBy"
+              value="views"
+              checked={state.sortBy === "views"}
+              onChange={(e) => handleState(e)}
+            />
+            Views
+          </label>
         </div>
         <hr />
         <div className="search-section">
