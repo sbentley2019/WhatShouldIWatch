@@ -26,12 +26,12 @@ export default function Signup(props) {
     <>
       <h1>Signup</h1>
       <form className="signup-form" onSubmit={submitForm}>
-        <label for="name">Name:</label>
+        <label for="username">Username:</label>
         <input
           type="text"
-          name="name"
-          placeholder="Name"
-          value={user.name}
+          name="username"
+          placeholder="Username"
+          value={user.username}
           onChange={handleUser}
         />
         <label for="email">Email:</label>
@@ -42,18 +42,18 @@ export default function Signup(props) {
           value={user.email}
           onChange={handleUser}
         />
-        <label for="username">Username:</label>
+        <label for="name">Name:</label>
         <input
           type="text"
-          name="username"
-          placeholder="username"
-          value={user.username}
+          name="name"
+          placeholder="Name"
+          value={user.name}
           onChange={handleUser}
         />
         <label for="password">Password:</label>
         <input
           type="password"
-          placeholder="password"
+          placeholder="Password"
           value={user.password}
           name="password"
           onChange={handleUser}

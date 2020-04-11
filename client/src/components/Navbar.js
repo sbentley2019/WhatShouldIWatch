@@ -4,27 +4,29 @@ import "./Navbar.scss";
 
 export default function Navbar(props) {
   return (
-    <nav className="options-nav">
-      <figure>
-        <Link to="/">
-          <i className="fas fa-home fa-3x"></i>
-        </Link>
-      </figure>
-      <figure>
-        <Link to="/search">
-          <i className="fas fa-search fa-3x"></i>
-        </Link>
-      </figure>
-      <figure>
-        <Link to="/ranking">
-          <i className="fas fa-list-ol fa-3x"></i>
-        </Link>
-      </figure>
-      <figure>
-        <Link to="/">
-          <i className="fas fa-dice fa-3x"></i>
-        </Link>
-      </figure>
+    <>
+      <nav className="options-nav">
+        <figure>
+          <Link to="/">
+            <i className="fas fa-home fa-3x"></i>
+          </Link>
+        </figure>
+        <figure>
+          <Link to="/search">
+            <i className="fas fa-search fa-3x"></i>
+          </Link>
+        </figure>
+        <figure>
+          <Link to="/ranking">
+            <i className="fas fa-list-ol fa-3x"></i>
+          </Link>
+        </figure>
+        <figure>
+          <Link to="/">
+            <i className="fas fa-dice fa-3x"></i>
+          </Link>
+        </figure>
+      </nav>
       <div className="user-div">
         {props.state.isLoggedIn ? (
           <>
@@ -55,6 +57,6 @@ export default function Navbar(props) {
           </>
         )}
       </div>
-    </nav>
+    </>
   );
 }

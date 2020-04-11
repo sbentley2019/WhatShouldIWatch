@@ -18,9 +18,9 @@ export default function App() {
   };
 
   return (
-    <main>
-      <Router>
-        <Navbar state={state} logout={logout} />
+    <Router>
+      <Navbar state={state} logout={logout} />
+      <main>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -41,7 +41,7 @@ export default function App() {
             <Search />
           </Route>
         </Switch>
-      </Router>
-    </main>
+      </main>
+    </Router>
   );
 }

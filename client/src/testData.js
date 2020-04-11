@@ -139,13 +139,6 @@ const categories = [
       "https://m.media-amazon.com/images/G/01/IMDb/genres/Sci-Fi._CB1513316168_SX233_CR0,0,233,131_AL_.jpg",
     alt: "sci-fi image",
   },
-
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Superhero._CB1513316168_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "superhero image",
-  },
-
   {
     src:
       "https://m.media-amazon.com/images/G/01/IMDb/genres/Thriller._CB1513316169_SX233_CR0,0,233,131_AL_.jpg",
