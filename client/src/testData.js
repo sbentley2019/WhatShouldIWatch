@@ -84,66 +84,18 @@ const reviews = [
 ];
 
 const categories = [
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Action._CB1513316166_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "action image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Adventure._CB1513316166_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "adventure image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Animation._CB1513316167_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "animation image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Comedy._CB1513316167_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "comedy image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Crime._CB1513316167_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "crime image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Drama._CB1513316168_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "drama image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Fantasy._CB1513316168_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "fantasy image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Horror._CB1513316168_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "horror image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Mystery._CB1513316168_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "mystery image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Romance._CB1513316168_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "romance image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Sci-Fi._CB1513316168_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "sci-fi image",
-  },
-  {
-    src:
-      "https://m.media-amazon.com/images/G/01/IMDb/genres/Thriller._CB1513316169_SX233_CR0,0,233,131_AL_.jpg",
-    alt: "thriller image",
-  },
+  "action",
+  "adventure",
+  "animation",
+  "comedy",
+  "crime",
+  "drama",
+  "fantasy",
+  "horror",
+  "mystery",
+  "romance",
+  "sci-fi",
+  "thriller",
 ];
 
 module.exports = {

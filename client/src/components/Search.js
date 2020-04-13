@@ -28,7 +28,11 @@ export default function Search(props) {
   };
 
   const handleState = function (e) {
-    if (e.target.name === "type" || e.target.name === "title") {
+    if (
+      e.target.name === "type" ||
+      e.target.name === "title" ||
+      e.target.name === "sortBy"
+    ) {
       setState({ ...state, [e.target.name]: e.target.value });
     }
   };

@@ -9,6 +9,7 @@ import Ranking from "./components/Ranking.js";
 import Search from "./components/Search.js";
 import Profile from "./components/Profile.js";
 import Navbar from "./components/Navbar.js";
+import About from "./components/About.js";
 
 export default function App() {
   const [state, setState] = useState({ isLoggedIn: false, user: null });
@@ -39,6 +40,9 @@ export default function App() {
           </Route>
           <Route path="/search">
             <Search />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
         </Switch>
       </main>

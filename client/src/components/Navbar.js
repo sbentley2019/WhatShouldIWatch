@@ -26,13 +26,18 @@ export default function Navbar(props) {
             <i className="fas fa-dice fa-3x"></i>
           </Link>
         </figure>
+        <figure>
+          <Link to="/about">
+            <i className="fas fa-info-circle fa-3x"></i>
+          </Link>
+        </figure>
       </nav>
       <div className="user-div">
         {props.state.isLoggedIn ? (
           <>
-            <Link to="/">
+            <Link to="/profile">
               <figure>
-                <i className="far fa-id-badge fa-3x"></i>
+                <i className="far fa-address-card fa-3x"></i>
               </figure>
             </Link>
             <figure>

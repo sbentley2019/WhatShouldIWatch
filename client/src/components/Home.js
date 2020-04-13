@@ -9,7 +9,8 @@ export default function Home(props) {
       <div className="browse-div">
         {categories.map((item, index) => (
           <figure key={index}>
-            <img src={item.src} alt={item.alt} />
+            <i className="fas fa-cloud fa-8x"></i>
+            <figcaption>{item}</figcaption>
           </figure>
         ))}
       </div>
