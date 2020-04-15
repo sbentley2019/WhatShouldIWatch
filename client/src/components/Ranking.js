@@ -24,12 +24,14 @@ export default function Ranking(props) {
           <tbody>
             {rank.map((movie, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{`${movie.title} (${movie.date})`}</td>
                   <td>{movie.rating}</td>
                   <td className="rank-img">
-                    <img src={movie.src} />
+                    <a href={movie.link}>
+                      <img src={movie.src} />
+                    </a>
                   </td>
                 </tr>
               );
