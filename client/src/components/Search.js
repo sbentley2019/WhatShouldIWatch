@@ -7,8 +7,8 @@ export default function Search(props) {
   const [state, setState] = useState({
     title: "",
     type: "all",
-    date: [0, 3000],
-    rating: [0, 10],
+    date: ["", ""],
+    rating: ["", ""],
     genre: {},
     sortBy: "alphabetical",
   });
@@ -112,16 +112,16 @@ export default function Search(props) {
         <hr />
         <div className="searchDate-div search-section">
           <h3>Release Date</h3>
-          <input type="number" name="date-from" value={state.date[0]} />
+          <input type="text" name="date-from" value={state.date[0]} />
           <span>to</span>
-          <input type="number" name="date-to" value={state.date[1]} />
+          <input type="text" name="date-to" value={state.date[1]} />
         </div>
         <hr />
         <div className="searchRating-div search-section">
           <h3>Rating</h3>
-          <input type="number" name="from" value={state.rating[0]} />
+          <input type="text" name="from" value={state.rating[0]} />
           <span>to</span>
-          <input type="number" name="to" value={state.rating[1]} />
+          <input type="text" name="to" value={state.rating[1]} />
         </div>
         <hr />
         <div className="searchSort-div search-section">

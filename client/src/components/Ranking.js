@@ -12,12 +12,11 @@ export default function Ranking(props) {
   return (
     <>
       <h1>Ranking</h1>
-      <div className="table-div">
+      <div className="ranking-div">
         <table>
           <thead>
             <tr>
               <th>rank</th>
-              <th>img</th>
               <th>title</th>
               <th>rating</th>
             </tr>
@@ -27,11 +26,11 @@ export default function Ranking(props) {
               return (
                 <tr>
                   <td>{index + 1}</td>
-                  <td>
-                    <img src={movie.link} />
-                  </td>
                   <td>{`${movie.title} (${movie.date})`}</td>
                   <td>{movie.rating}</td>
+                  <td className="rank-img">
+                    <img src={movie.src} />
+                  </td>
                 </tr>
               );
             })}
@@ -39,24 +38,24 @@ export default function Ranking(props) {
         </table>
         {/* <table>
           <thead>
-            <tr>
-              <th>title</th>
-              <th>description</th>
-              <th>rating</th>
-            </tr>
+          <tr>
+          <th>title</th>
+          <th>description</th>
+          <th>rating</th>
+          </tr>
           </thead>
           <tbody>
-            {state.recent.map((review) => {
-              return (
-                <tr>
-                  <td>{review.title}</td>
-                  <td>{review.review}</td>
-                  <td>{review.rated}</td>
-                </tr>
+          {state.recent.map((review) => {
+            return (
+              <tr>
+              <td>{review.title}</td>
+              <td>{review.review}</td>
+              <td>{review.rated}</td>
+              </tr>
               );
             })}
-          </tbody>
-        </table> */}
+            </tbody>
+          </table> */}
       </div>
     </>
   );
